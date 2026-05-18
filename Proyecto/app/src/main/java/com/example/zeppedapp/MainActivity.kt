@@ -67,6 +67,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.zeppedapp.ui.theme.ZeppedAppTheme
+import com.example.zeppedapp.ui.theme.Screens.Home
+import com.example.zeppedapp.navegation.Screens
 
 
 
@@ -76,6 +78,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ZeppedAppTheme {
+                val backStack = rememberNavBackStack(Screens.Principal)
+
+                NavDisplay(
+                    backStack =backStack,
+                    entryProvider = entryProvider {
+                        entry<Screens.Principal> {
+                            Login(backStack)
+                        }
+                        entry<Screens.Home> {
+                            Home(backStack)
+                        }
+                    }
+                )
                 Greeting()
             }
         }
