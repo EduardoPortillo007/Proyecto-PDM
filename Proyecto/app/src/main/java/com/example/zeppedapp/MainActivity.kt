@@ -6,12 +6,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-<<<<<<< HEAD
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.example.zeppedapp.ui.theme.Screens.Login
-=======
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -72,7 +70,6 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
->>>>>>> develop
 import com.example.zeppedapp.ui.theme.ZeppedAppTheme
 import com.example.zeppedapp.ui.theme.Screens.Home
 import com.example.zeppedapp.navegation.Screens
@@ -85,7 +82,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ZeppedAppTheme {
-<<<<<<< HEAD
+
                 val backStack = rememberNavBackStack(Screens.Principal)
 
                 NavDisplay(
@@ -99,10 +96,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 )
-            }
-        }
-    }
-=======
+
                 Greeting()
             }
         }
@@ -295,5 +289,4 @@ fun GreetingPreview() {
     ZeppedAppTheme {
         Greeting()
     }
->>>>>>> develop
 }
