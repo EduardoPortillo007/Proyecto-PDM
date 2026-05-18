@@ -4,14 +4,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation3.runtime.entryProvider
+import androidx.navigation3.runtime.rememberNavBackStack
+import androidx.navigation3.ui.NavDisplay
+import com.example.zeppedapp.ui.theme.Screens.Login
 import com.example.zeppedapp.ui.theme.ZeppedAppTheme
+import com.example.zeppedapp.ui.theme.Screens.Home
+import com.example.zeppedapp.navegation.Screens
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +18,20 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ZeppedAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                val backStack = rememberNavBackStack(Screens.Principal)
+
+                NavDisplay(
+                    backStack =backStack,
+                    entryProvider = entryProvider {
+                        entry<Screens.Principal> {
+                            Login(backStack)
+                        }
+                        entry<Screens.Home> {
+                            Home(backStack)
+                        }
+                    }
+                )
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ZeppedAppTheme {
-        Greeting("Android")
     }
 }
