@@ -1,4 +1,4 @@
-package com.example.zeppedapp.navigation
+package com.example.zeppedapp.presentation.navigation
 
 import androidx.navigation3.runtime.NavKey
 import kotlinx.serialization.Serializable
@@ -17,17 +17,17 @@ sealed class Screens : NavKey {
     }
 
     @Serializable
-    data object Actualizar : Screens(){
+    data object Venta : Screens(){
 
     }
 
     @Serializable
-    data object UpdatearInv : Screens(){
+    data object Inventario : Screens(){
 
     }
 
     @Serializable
-    data object VerInventario : Screens(){
+    data object ProductoMenu : Screens(){
 
     }
 
