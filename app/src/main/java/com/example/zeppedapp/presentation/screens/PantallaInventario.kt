@@ -8,5 +8,9 @@ import androidx.navigation3.runtime.NavKey
 fun PantallaInventario(
     backStack: NavBackStack<NavKey>
 ){
+    //Debe de tener:
+    // un cuadro con la lista de todos los ingrdients y consumibles
+    // un botón que diga "Actualizar Inventario" (debes de crear esa pantalla)
+    //otro botón para regresar a la pantalla Principal
 
 }

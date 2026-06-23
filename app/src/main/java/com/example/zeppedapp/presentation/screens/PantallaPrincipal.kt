@@ -8,6 +8,10 @@ import androidx.navigation3.runtime.NavKey
 fun PantallaPrincipal(
     backStack: NavBackStack<NavKey>
 ){
+    //Debe tener:
+    //1 Botón que diga "Venta" o "Venta de menú" puedes elegir el nombre
+    //1 Botón que diga "Inventario"
+    //Una pantalla blanca donde se dará notificaciones
 
 
 }

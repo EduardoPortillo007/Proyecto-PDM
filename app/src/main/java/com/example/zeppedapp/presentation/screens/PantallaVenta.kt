@@ -8,5 +8,7 @@ import androidx.navigation3.runtime.NavKey
 fun PantallaVenta(
     backStack: NavBackStack<NavKey>
 ){
-
+    //Debe de tener:
+    //Unos cuadros con el nombre y la imagen del platillo(Cheesy, Chilli) en individual y en combo(ya te pasaré por wasap todo el menú con sus ingtredientes y que sean clickeables
+    //Botón de regresar
 }
