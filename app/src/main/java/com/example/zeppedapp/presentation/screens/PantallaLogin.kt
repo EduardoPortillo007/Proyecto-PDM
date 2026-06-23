@@ -1,0 +1,12 @@
+package com.example.zeppedapp.presentation.screens
+
+import androidx.compose.runtime.Composable
+import androidx.navigation3.runtime.NavBackStack
+import androidx.navigation3.runtime.NavKey
+
+@Composable
+fun PantallaLogin(
+    backStack: NavBackStack<NavKey>
+){
+    //Login del usuario
+}
