@@ -8,7 +8,5 @@ import kotlinx.serialization.Serializable
 data class ProductoDto(
     val id: Int,
     val nombre: String,
-    val precio: Double,
-    @SerialName("imagen_url")
-    val imagenUrl: String?
+    val precio: Double
 )
