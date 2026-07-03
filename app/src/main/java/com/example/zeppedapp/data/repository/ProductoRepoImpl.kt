@@ -16,7 +16,7 @@ class ProductoRepositoryImpl : ProductoRepository {
     override suspend fun getProductos(): Resource<List<Producto>> {
         return try {
             //peticion tipo get
-            val response = ktorClient.get("/rest/v1/productos") {
+            val response = ktorClient.get("/rest/v1/Producto") {
                 headers.append("Prefer", "return=representation")
             }
             //comversión de json
@@ -31,7 +31,7 @@ class ProductoRepositoryImpl : ProductoRepository {
         return try {
             //enviar petición tipo post
             //serialización automatica a json
-            ktorClient.post("/rest/v1/productos") {
+            ktorClient.post("/rest/v1/Producto") {
                 headers.append("Prefer", "return=representation")
                 setBody(producto)
             }
