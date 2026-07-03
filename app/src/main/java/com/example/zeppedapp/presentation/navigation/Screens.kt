@@ -6,6 +6,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 sealed class Screens : NavKey {
 
+    //Pantallas
     @Serializable
     data object Login: Screens(){
 
