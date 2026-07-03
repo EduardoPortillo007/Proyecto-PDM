@@ -12,19 +12,20 @@ import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-val ktorClient = HttpClient(Android) {
+val ktorClient = HttpClient(Android) {//Creación del cliente global
 
+    //repuesta y petición
     install(ContentNegotiation) {
         json(Json {
             ignoreUnknownKeys = true
             isLenient = true
         })
     }
-
+    //registro peticiones
     install(Logging) {
         level = LogLevel.ALL
     }
-
+    //peticiones predeterminadas
     defaultRequest {
         url(Constants.BASE_URL)
         contentType(ContentType.Application.Json)

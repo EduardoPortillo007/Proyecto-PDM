@@ -15,9 +15,11 @@ class ProductoRepositoryImpl : ProductoRepository {
 
     override suspend fun getProductos(): Resource<List<Producto>> {
         return try {
+            //peticion tipo get
             val response = ktorClient.get("/rest/v1/productos") {
                 headers.append("Prefer", "return=representation")
             }
+            //comversión de json
             val dtos = response.body<List<ProductoDto>>()
             Resource.Success(dtos.map { it.toDomain() })
         } catch (e: Exception) {
@@ -27,6 +29,8 @@ class ProductoRepositoryImpl : ProductoRepository {
 
     override suspend fun addProducto(producto: Producto): Resource<Unit> {
         return try {
+            //enviar petición tipo post
+            //serialización automatica a json
             ktorClient.post("/rest/v1/productos") {
                 headers.append("Prefer", "return=representation")
                 setBody(producto)
