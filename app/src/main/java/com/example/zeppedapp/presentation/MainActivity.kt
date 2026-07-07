@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
                         }
                         entry<Screens.Venta> {
                             PantallaVenta(
-                                backStack = backStack
+                                backStack = backStack,
                             )
                         }
                         entry<Screens.Inventario> {
