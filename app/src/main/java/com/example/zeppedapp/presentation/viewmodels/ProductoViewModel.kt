@@ -8,12 +8,12 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import com.example.zeppedapp.dominio.model.Producto
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 
-class ProductoViewModel : ViewModel() {
+class ProductoViewModel(application: Application) : AndroidViewModel(application) {
 
-    //declaración
-    private val repository = ProductoRepositoryImpl()
-
+    private val repository = ProductoRepositoryImpl(application.applicationContext)
 
     private val _productos = MutableStateFlow<Resource<List<Producto>>>(Resource.Loading)//indicador de carga
     val productos: StateFlow<Resource<List<Producto>>> = _productos
