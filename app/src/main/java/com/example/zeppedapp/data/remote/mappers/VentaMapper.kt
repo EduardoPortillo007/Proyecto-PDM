@@ -5,7 +5,7 @@ import com.example.zeppedapp.data.remote.dto.VentaDto
 import com.example.zeppedapp.dominio.model.DetalleVenta
 import com.example.zeppedapp.dominio.model.Venta
 
-// data/remote/mappers/VentaMapper.kt
+//Conversión de DTO a mapper para enviar a model
 fun VentaDto.toDomain(): Venta {
     return Venta(
         id = id,
@@ -15,6 +15,7 @@ fun VentaDto.toDomain(): Venta {
     )
 }
 
+//Conversión para Detalle venta
 fun DetalleVentaDto.toDomain(): DetalleVenta {
     return DetalleVenta(
         id = id,
