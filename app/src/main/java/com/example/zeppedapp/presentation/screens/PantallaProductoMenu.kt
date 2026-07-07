@@ -43,10 +43,6 @@ data class CustomIngredient(
 @Composable
 fun PantallaProductoMenu(
     backStack: NavBackStack<NavKey>,
-    productName: String = "Cheesy Hot Dog",
-    productEmoji: String = "🌭🧀",
-    onConfirmClick: (quantity: Int, ingredients: List<String>) -> Unit = { _, _ -> },
-    onCancelClick: () -> Unit = {}
 ) {
     val darkRed = Color(0xFF6B0000)
     val cardBgColor = Color(0xFFD68A8A).copy(alpha = 0.85f)
