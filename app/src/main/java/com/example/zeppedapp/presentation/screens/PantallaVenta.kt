@@ -54,7 +54,6 @@ data class MenuProduct(
 @Composable
 fun PantallaVenta(
     backStack: NavBackStack<NavKey>,
-    onBackClick: () -> Unit
 ){
     //Debe de tener:
     //Unos cuadros con el nombre y la imagen del platillo(Cheesy, Chilli) en individual y en combo
@@ -200,7 +199,7 @@ fun PantallaVenta(
                 modifier = Modifier
                     .width(180.dp)
                     .height(50.dp)
-                    .clickable { onBackClick() },
+                    .clickable {  },
                 shape = CircleShape,
                 color = cardBgColor
             ) {
