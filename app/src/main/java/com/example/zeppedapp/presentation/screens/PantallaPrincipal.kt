@@ -13,5 +13,4 @@ fun PantallaPrincipal(
     //1 Botón que diga "Inventario"
     //Una pantalla blanca donde se dará notificaciones
 
-
 }
